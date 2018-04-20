@@ -1,0 +1,17 @@
+<br>
+<div class="container" >
+	
+	<form   (ngSubmit)="processForm()" >
+		<div class="form group">
+			<label for="Nome">Digite o Nome da sua capsula de café</label>
+			<input type="text" name="Nome" class="form-control"  [(ngModel)] = "Capsula.nomeCapsula">
+		</div>
+		<div class="form group">
+      <label for="Idade">Digite o sabor de sua capsula</label>
+      <input type="text" name="Sabor" class="form-control"  [(ngModel)] = "Capsula.saborCapsula">
+    </div>
+    <br>
+		<input type="submit" class="btn btn-success" value="Salvar Capsula">
+	</form>
+
+</div>

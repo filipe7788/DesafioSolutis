@@ -1,0 +1,21 @@
+  <div class="container">
+    <table class= "table table-striped">
+      <thead>
+        <th>Nome</th>
+        <th>Sabor</th>
+        <th>Opções</th>
+      </thead>
+    
+      <tbody>
+        <tr *ngFor="let Capsula of Capsulas">
+        <td>{{Capsula.nomeCapsula}}</td>
+        <td>{{Capsula.saborCapsula}}</td>
+        <td> <button class="btn btn-danger" (click)= 'deleteCapsula(Capsula)'>Deletar Capsula</button>
+           <button class="btn btn-primary" (click)='updateCapsula(Capsula)'>Editar Capsula</button>
+        </td>
+        </tr>
+      </tbody>
+      <br><br>
+    </table>
+    <button class="btn btn-primary" (click)='novoCapsula()'>Nova Capsula</button>
+    </div>
