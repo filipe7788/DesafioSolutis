@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/TextViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="73dp"
+        android:text="Cadastro de Capsulas"
+        android:textSize="15pt"></TextView>
+
+    <EditText
+        android:id="@+id/saborCapsula"
+        android:layout_width="321dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:editable="true"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Sabor da Capsula" />
+
+    <EditText
+        android:id="@+id/nomeCapsula"
+        android:layout_width="321dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="175dp"
+        android:editable="true"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Nome da Capsula" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="47dp"
+        android:text="Cadastrar" />
+
+
+</RelativeLayout>

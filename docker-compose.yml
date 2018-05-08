@@ -1,0 +1,11 @@
+version: '2'
+services:
+  frontend:
+    build: Angular/.
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+  backend:
+    build: SpringBoot/.
+
