@@ -19,8 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.solutis.entidade.Capsula;
 import com.solutis.Repositories.CapsulaRepository;
 
+@CrossOrigin(origins="*")
 @RestController
-@CrossOrigin
 @RequestMapping("/api")
 public class CapsulaController {
 
@@ -33,14 +33,9 @@ public class CapsulaController {
 		return capsulaRepository.findAll();
 	}
 	
-	@GetMapping("/capsula/{id}")
-	public Capsula getCapsula(@PathVariable Long Id) {
-		return capsulaRepository.getOne(Id);
-	}
-	
 	@DeleteMapping("/capsula/{id}")
-	public boolean removeCapsula(@PathVariable Long Id) {
-		capsulaRepository.deleteById(Id);
+	public boolean removeCapsula(@PathVariable Long id) {
+		capsulaRepository.deleteById(id);
 		return true;
 	}
 	

@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class ListaComponent implements OnInit {
 
-  private Capsulas:Capsula[];
+  public Capsulas:Capsula[];
 
   constructor(private _Service: ServicoService, private _router: Router) { }
 

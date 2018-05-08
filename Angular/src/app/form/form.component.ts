@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class FormComponent implements OnInit {
 
-  private Capsula: Capsula = new Capsula();
+  public Capsula: Capsula = new Capsula();
   form: FormGroup;
 
   constructor(private _Servico: ServicoService, private _router: Router) {

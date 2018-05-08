@@ -10,7 +10,6 @@ import 'rxjs/add/observable/throw';
 @Injectable()
 export class ServicoService {
 
-  
   private urlBase: string = 'http://localhost:8080/api';
   private headers = new Headers({'Content-Type': 'application/json'});
   private options = new RequestOptions({headers: this.headers, });
@@ -24,17 +23,17 @@ export class ServicoService {
   }
 
    deleteCapsula(id:number){
-  	return this._http.delete(this.urlBase+"/Capsula/"+id, this.options).map(
+  	return this._http.delete(this.urlBase+"/capsula/"+id, this.options).map(
   		(response:Response) => response.json()).catch(this.errorHandler);
   }
 
   novoCapsula(Capsula:Capsula){
-  	return this._http.post(this.urlBase+"/Capsula",JSON.stringify(Capsula), this.options).map(
+  	return this._http.post(this.urlBase+"/capsula",JSON.stringify(Capsula), this.options).map(
   		(response:Response) => response.json()).catch(this.errorHandler);
   }
 
   updateCapsula(Capsula:Capsula){
-  	return this._http.put(this.urlBase+"/Capsula",JSON.stringify(Capsula), this.options).map(
+  	return this._http.put(this.urlBase+"/capsula",JSON.stringify(Capsula), this.options).map(
   		(response:Response) => response.json()).catch(this.errorHandler);
   }
 
