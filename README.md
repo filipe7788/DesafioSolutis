@@ -6,7 +6,7 @@ Desafio Solutis para período de treinamento - programa code rangers com:
 
 ## Instalação 
 
-* Após instalar o docker execute os seguintes comandos:
+* Após instalar o docker execute os seguintes comandos no terminal:
 
 ```
 docker pull filipe7788/angular
