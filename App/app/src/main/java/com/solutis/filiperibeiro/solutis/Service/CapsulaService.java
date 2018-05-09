@@ -21,7 +21,7 @@ public interface CapsulaService {
     Call<ArrayList<Capsula>> buscarCAP();
 
     @DELETE("capsula/{id}")
-    Call<Boolean> deleteCap(@Path("id") int id);
+    Call<Boolean> deleteCap(@Path("id") long id);
 
     @POST("capsula")
     Call<Capsula> salvaCap(@Body Capsula cap);

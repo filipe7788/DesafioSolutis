@@ -1,15 +1,22 @@
 package com.solutis.filiperibeiro.solutis.Model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 
-@JsonIgnoreProperties({"idCapsula"})
 public class Capsula implements Serializable {
 
+    @SerializedName("idCapsula")
+    @Expose
+    private long idCapsula;
 
-    private Long idCapsula;
+    @SerializedName("nomeCapsula")
+    @Expose
     private String nomeCapsula;
+
+    @SerializedName("saborCapsula")
+    @Expose
     private String saborCapsula;
 
     public Capsula(String nomeCapsula, String saborCapsula) {
@@ -23,17 +30,17 @@ public class Capsula implements Serializable {
     @Override
     public String toString() {
         return "Capsula{" +
-                "id=" + idCapsula +
+                "idCapsula=" + idCapsula +
                 ", nomeCapsula='" + nomeCapsula + '\'' +
                 ", saborCapsula='" + saborCapsula + '\'' +
                 '}';
     }
 
-    public Long getId() {
+    public long getId() {
         return idCapsula;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.idCapsula = id;
     }
 

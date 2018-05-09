@@ -28,6 +28,7 @@ public class CapsulaAdapter extends ArrayAdapter<Capsula> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
 
+
         LayoutInflater layoutInflater = (LayoutInflater) contexto.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         View row = layoutInflater.inflate(R.layout.row,parent, false);

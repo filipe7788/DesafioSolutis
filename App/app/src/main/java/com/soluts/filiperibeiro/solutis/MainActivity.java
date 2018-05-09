@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
 
         listaView.setOnMenuItemClickListener(new SwipeMenuListView.OnMenuItemClickListener() {
             @Override
-            public boolean onMenuItemClick(final int position, SwipeMenu menu, int index) {
+            public boolean onMenuItemClick(final int position, final SwipeMenu menu, int index) {
                 switch (index) {
                     case 0:
                         Intent it = new Intent(MainActivity.this, form_activity.class);
@@ -121,7 +121,8 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void run() {
                                 try {
-                                     new RetrofitConfig().getCAPService().deleteCap(position+1).execute();
+                                    Capsula cap  = capsulas.get(position);
+                                     new RetrofitConfig().getCAPService().deleteCap(cap.getId()).execute();
                                      capsulas.remove(position);
                                     mainHandler.post(run);
                                 } catch (IOException e) {
@@ -143,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
                 Call<ArrayList<Capsula>> call = new RetrofitConfig().getCAPService().buscarCAP();
                 try {
                     capsulas = (call.execute().body());
-                    Log.d("AR",  capsulas.toString());
+
                     mainHandler.post(run);
                 } catch (IOException e) {
                     e.printStackTrace();
