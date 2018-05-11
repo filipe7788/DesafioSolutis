@@ -3,9 +3,12 @@ services:
   frontend:
     build: Angular/.
     ports:
-      - "80:80"
+      - "4200:4200"
     depends_on:
       - backend
   backend:
     build: SpringBoot/.
+    ports:
+      - "8080:8080"
+      
 

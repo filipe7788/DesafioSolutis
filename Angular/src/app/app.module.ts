@@ -25,6 +25,7 @@ const appRoutes: Routes =[
   imports: [
     FormsModule,
     BrowserModule,
+    ReactiveFormsModule,
     HttpModule,
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
