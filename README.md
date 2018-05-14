@@ -1,5 +1,5 @@
 # DesafioSolutis
-Desafio Solutis para período de treinamento - programa code rangers com:
+Desafio Solutis para período de treinamento - programa code-rangers com:
 * Aplicativo mobile em java
 * Web API com Spring Boot
 * Aplicação web com Angular
@@ -11,7 +11,7 @@ Desafio Solutis para período de treinamento - programa code rangers com:
 ```
 docker pull filipe7788/angular
 ```
- #### e
+ #### > e
 ```
 docker pull filipe7788/springboot
 ```
