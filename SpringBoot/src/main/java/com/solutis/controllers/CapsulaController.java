@@ -1,6 +1,7 @@
 package com.solutis.controllers;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.transaction.Transactional;
 
@@ -31,6 +32,11 @@ public class CapsulaController {
 	@GetMapping("/capsulas")
 	public List<Capsula> getCapsulas() {
 		return capsulaRepository.findAll();
+	}
+	
+	@GetMapping("/pcapsula/{id}")
+	public Optional<Capsula> getCapsula(@PathVariable Long id){
+		return capsulaRepository.findById(id);
 	}
 	
 	@DeleteMapping("/capsula/{id}")
